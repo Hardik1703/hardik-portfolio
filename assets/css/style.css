@@ -48,7 +48,7 @@
   --background-color-1: #1f1f1f;
   --background-color-2: #151515;
   --background-color-3: #2f2f2f;
-  --shadow-1: 1px 1px 1px  #1c1e22, -1px -1px 3px #262a2e;
+  --shadow-1: 1px 1px 1px #1c1e22, -1px -1px 3px #262a2e;
   --shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
   --inner-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset,
     -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
@@ -148,6 +148,116 @@ body {
   body {
     overflow: hidden;
   }
+}
+
+/* logo color transfer */
+.hardik_logo {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+/* PRELOADER */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  background: #1f1f1f;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  z-index: 99;
+  transition-delay: 0.65s;
+}
+
+.preloader * {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.preloader:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 200px 100vh 0;
+  border-color: transparent #282828 transparent transparent;
+  position: absolute;
+  left: -200px;
+  top: 0;
+}
+
+.preloader:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 100vh 0 0 200px;
+  border-color: transparent transparent transparent #282828;
+  position: absolute;
+  right: -200px;
+  top: 0;
+}
+
+.preloader .inner {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.preloader .inner .logo {
+  display: inline-block;
+  margin: 0;
+  animation: fadeInUp ease 0.6s;
+}
+
+.preloader .inner .logo img {
+  height: 300px;
+}
+
+.preloader .inner .percentage {
+  width: 100%;
+  font-size: 70vh;
+  line-height: 1;
+  font-weight: 800;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  opacity: 0.05;
+  transition-delay: 0.1s;
+}
+
+.page-loaded .preloader {
+  left: calc(-100% - 200px);
+  visibility: hidden;
+}
+
+.page-loaded .preloader .logo {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.page-loaded .preloader .percentage {
+  margin-left: 100px;
+  opacity: 0;
 }
 
 /* feature section */
@@ -6820,7 +6930,7 @@ input[type="submit"]:hover {
   transform: translateY(-5px);
 }
 
-.resumeButton{
+.resumeButton {
   /* margin-top: 30px; */
 }
 
@@ -6841,7 +6951,7 @@ input[type="submit"]:hover {
   color: #fff;
   position: relative;
   overflow: hidden;
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .resumeButton .btn-resume:hover {
@@ -7099,7 +7209,6 @@ input[type="submit"]:hover {
   }
 }
 
-
 /*==============================
  *  Utilities
 =================================*/
@@ -7154,7 +7263,6 @@ font-family: 'Red Hat Display', sans-serif;
 .bg-color-extra03 {
   background: var(--color-extra03);
 }
-
 
 /* Height and width */
 .fullscreen {
@@ -18348,7 +18456,8 @@ span.sr-only {
   position: absolute;
 }
 
-.rn-portfolio-area ,.rn-testimonial-area {
+.rn-portfolio-area,
+.rn-testimonial-area {
   background-color: #0f0f0f;
 }
 
