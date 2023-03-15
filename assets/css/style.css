@@ -150,6 +150,14 @@ body {
   }
 }
 
+/* feature section */
+.path-img {
+  position: absolute;
+  left: 0;
+  bottom: 250px;
+  /* z-index: -1; */
+}
+
 h1,
 h2,
 h3,
@@ -19414,5 +19422,3 @@ Rn Slick Dots Style
 .box-wrapper .rn-header.header--fixed.sticky {
   box-shadow: 0px 0px 19px 0 #1c1e22;
 }
-
-

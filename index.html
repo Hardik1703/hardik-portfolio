@@ -184,8 +184,9 @@
 
                         <div class="order-1 order-lg-2 col-lg-5">
                             <div class="thumbnail">
-                                <div class="inner">
-                                    <img src="assets/images/slider/hardik.png" alt="Personal Portfolio Images" data-tilt="" style="will-change: transform;transform: perspective(300px) rotateX(0deg) rotateY(0deg);">
+                                <div class="inner content-img">
+                                    <img src="assets/images/slider/hardik.png" data-tilt
+                                        alt="Personal Portfolio Images">
                                 </div>
                             </div>
                         </div>
@@ -197,6 +198,7 @@
 
         <!-- Start Service Area -->
         <div class="rn-service-area rn-section-gap section-separator" id="features">
+            <img class="path-img" src="assets/images/icons/Shape.svg" alt="images_not_found">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -218,9 +220,9 @@
                                     <i data-feather="menu"></i>
                                 </div>
                                 <div class="content">
-                                    <h4 class="title"><a href="#">Business Stratagy</a></h4>
-                                    <p class="description">I throw myself down among the tall grass by the stream as I
-                                        lie close to the earth.</p>
+                                    <h4 class="title"><a href="#">Web Development</a></h4>
+                                    <p class="description">Get solutions tailored to your business needs from the best
+                                        web development.</p>
                                     <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -237,9 +239,9 @@
                                     <i data-feather="book-open"></i>
                                 </div>
                                 <div class="content">
-                                    <h4 class="title"><a href="#">App Development</a></h4>
-                                    <p class="description"> It uses a dictionary of over 200 Latin words, combined with
-                                        a handful of model sentence.</p>
+                                    <h4 class="title"><a href="#">Web Design</a></h4>
+                                    <p class="description"> Get the most interactive and clear design with our web
+                                        design services.</p>
                                     <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -256,9 +258,9 @@
                                     <i data-feather="tv"></i>
                                 </div>
                                 <div class="content">
-                                    <h4 class="title"><a href="#">App Development</a></h4>
-                                    <p class="description">I throw myself down among the tall grass by the stream as I
-                                        lie close to the earth.</p>
+                                    <h4 class="title"><a href="#">Testing & QA</a></h4>
+                                    <p class="description">As a leading software testing , we provide quality assurance
+                                        and software testing services to ensure your software is safe and reliable.</p>
                                     <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -275,9 +277,9 @@
                                     <i data-feather="twitch"></i>
                                 </div>
                                 <div class="content">
-                                    <h4 class="title"><a href="#">Mobile App</a></h4>
-                                    <p class="description">There are many variations of passages of Lorem Ipsum
-                                        available, but the majority.
+                                    <h4 class="title"><a href="#">SEO</a></h4>
+                                    <p class="description">Creative UI/UX designers to create innovative app
+                                        UI designs across all your digital channels.
                                     </p>
                                     <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
                                 </div>
@@ -295,9 +297,9 @@
                                     <i data-feather="wifi"></i>
                                 </div>
                                 <div class="content">
-                                    <h4 class="title"><a href="#">CEO Marketing</a></h4>
-                                    <p class="description">always free from repetition,
-                                        injected humour, or non-characteristic words etc.</p>
+                                    <h4 class="title"><a href="#">Domain Registration</a></h4>
+                                    <p class="description">We Provide The appropriate domain selection is crucial
+                                        for any business.</p>
                                     <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -314,9 +316,9 @@
                                     <i data-feather="slack"></i>
                                 </div>
                                 <div class="content">
-                                    <h4 class="title"><a href="#">Personal Portfolio April</a></h4>
-                                    <p class="description"> It uses a dictionary of over 200 Latin words, combined with
-                                        a handful of model sentence.</p>
+                                    <h4 class="title"><a href="#">Hosting Service</a></h4>
+                                    <p class="description"> We provide our customers with the most stable, cheap
+                                        and fastest web hosting solutions.</p>
                                     <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -332,6 +334,7 @@
 
         <!-- Start Portfolio Area -->
         <div class="rn-portfolio-area rn-section-gap section-separator" id="portfolio">
+            <img class="path-img" src="assets/images/icons/Shape.svg" alt="images_not_found">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -1272,446 +1275,15 @@
             scrollToTop();
         }
     </script>
-    <script>
-        (function ($) {
-    "use strict";
-    jQuery(document).ready(function ($) {
-        $(".cta-btn, .header-action a").tilt({
-            maxTilt: 15,
-            perspective: 1400,
-            easing: "cubic-bezier(.03,.98,.52,.99)",
-            speed: 1200,
-            glare: true,
-            maxGlare: 0.2,
-            scale: 1.04
+    <!-- image animation script -->
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".content-img"), {
+            max: .1,
+            speed: 4
         });
-
-        $(".c_form input").each(function () {
-            if ($(this).val() != "") {
-                $(this).parent().addClass("animation");
-            }
-        });
-
-        $(".c_form input").focus(function () {
-            $(this).parent().addClass("animation animation-color");
-        });
-
-        $(".c_form input").focusout(function () {
-            if ($(this).val() === "")
-                $(this).parent().removeClass("animation");
-            $(this).parent().removeClass("animation-color");
-        });
-
-        $(".c_form textarea").each(function () {
-            if ($(this).val() != "") {
-                $(this).parent().addClass("animation");
-            }
-        });
-
-        $(".c_form textarea").focus(function () {
-            $(this).parent().addClass("animation animation-color");
-        });
-
-        $(".c_form textarea").focusout(function () {
-            if ($(this).val() === "")
-                $(this).parent().removeClass("animation");
-            $(this).parent().removeClass("animation-color");
-        });
-
-        $(".c_form select").each(function () {
-            if ($(this).val() != "") {
-                $(this).parent().addClass("animation");
-            }
-        });
-
-        $(".c_form select").focus(function () {
-            $(this).parent().addClass("animation animation-color");
-        });
-
-        $(".c_form select").focusout(function () {
-            if ($(this).val() === "")
-                $(this).parent().removeClass("animation");
-            $(this).parent().removeClass("animation-color");
-        });
-
-
-        var $status = $('.pagingInfo');
-        var $slickElement = $('.improve-slider');
-
-        $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-            //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-            var i = (currentSlide ? currentSlide : 0) + 1;
-            $status.text(i + '/' + slick.slideCount);
-        });
-
-        $slickElement.slick({
-            dots: false,
-            arrows: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            centerMode: false,
-            autoplay: true,
-            prevArrow: $('.improve_prev'),
-            nextArrow: $('.improve_next'),
-        });
-
-        var $pstatus = $('.pagingInfo');
-        var $pslickElement = $('.partner-slider');
-
-        $pslickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-            //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-            var ix = (currentSlide ? currentSlide : 0) + 1;
-            $pstatus.text(ix + '/' + slick.slideCount);
-        });
-
-        $pslickElement.slick({
-            dots: false,
-            arrows: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            centerMode: false,
-            autoplay: true,
-            fade: true,
-            prevArrow: $('.partner_prev'),
-            nextArrow: $('.partner_next'),
-        });
-
-        $(".app-slider").slick({
-            dots: false,
-            arrows: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            centerMode: false,
-            autoplay: true,
-            fade: true,
-        });
-
-
-        $('.custom_select select').each(function () {
-            var $this = $(this),
-                numberOfOptions = $(this).children('option').length;
-
-            $this.addClass('select-hidden');
-            $this.wrap('<div class="select"></div>');
-            $this.after('<div class="select-styled"></div>');
-
-            var $styledSelect = $this.next('div.select-styled');
-            $styledSelect.text($this.children('option').eq(0).text());
-
-            var $list = $('<ul />', {
-                'class': 'select-options'
-            }).insertAfter($styledSelect);
-
-            for (var i = 0; i < numberOfOptions; i++) {
-                $('<li />', {
-                    text: $this.children('option').eq(i).text(),
-                    rel: $this.children('option').eq(i).val()
-                }).appendTo($list);
-            }
-
-            var $listItems = $list.children('li');
-
-            $styledSelect.click(function (e) {
-                e.stopPropagation();
-                $('div.select-styled.active').not(this).each(function () {
-                    $(this).removeClass('active').next('ul.select-options').hide();
-                });
-                $(this).toggleClass('active').next('ul.select-options').toggle();
-            });
-
-            $listItems.click(function (e) {
-                e.stopPropagation();
-                $styledSelect.text($(this).text()).removeClass('active');
-                $this.val($(this).attr('rel'));
-                $list.hide();
-            });
-
-            $(document).click(function () {
-                $styledSelect.removeClass('active');
-                $list.hide();
-            });
-        });
-
-        $('.accordion-item').click(function (event) {
-            $('.active').removeClass('active');
-
-            $(this).addClass('active');
-
-            event.preventDefault();
-        });
-
-
-        $(window).scroll(function () {
-            $('.header-toggle').hide();
-            if ($(this).scrollTop() > 0) {
-                $('.header-area').addClass('fold');
-                if ($(window).width() > 1000) {
-                    $('.mainmenu').css("marginLeft", "-660px");
-                    $('.header-action').hide();
-                    $('.header-toggle').show();
-                    $('.header-navigation').css("overflow", "hidden");
-                }
-
-            } else {
-                $('.header-area').removeClass('fold');
-                $('.mainmenu').css("marginLeft", "0px");
-                $('.header-action').show();
-                $('.header-toggle').hide();
-                $('.header-navigation').css("overflow", "visible");
-            }
-        });
-
-        $('.header-toggle').click(function (event) {
-            $('.mainmenu').css("marginLeft", "0px");
-            $('.header-action').show();
-            $('.header-toggle').hide();
-            $('.header-navigation').css("overflow", "visible");
-            event.preventDefault();
-        });
-
-        $(".scrolDown").click(function () {
-            $('html,body').animate({
-                    scrollTop: $("#feature").offset().top
-                },
-                'slow');
-        });
-
-        $('.scrollID').on('click', function (e) {
-            var href = $(this).attr('href');
-            $('html, body').animate({
-                scrollTop: $(href).offset().top
-            }, '300');
-
-        });
-
-        $('.sidescroll').on('click', function (e) {
-            var href = $(this).attr('href');
-            $('html, body').animate({
-                scrollTop: $(href).offset().top - 90
-            }, '300');
-
-        });
-
-        // Cache selectors
-        var topMenu = $(".industry-sidebar > ul "),
-            topMenuHeight = topMenu.outerHeight() + 15,
-            // All list items
-            menuItems = topMenu.find("a"),
-            // Anchors corresponding to menu items
-            scrollItems = menuItems.map(function () {
-                var item = $($(this).attr("href"));
-                if (item.length) {
-                    return item;
-                }
-            });
-
-        // Bind to scroll
-        $(window).scroll(function () {
-            // Get container scroll position
-            var fromTop = $(this).scrollTop() + topMenuHeight;
-
-            // Get id of current scroll item
-            var cur = scrollItems.map(function () {
-                if ($(this).offset().top < fromTop)
-                    return this;
-            });
-            // Get the id of the current element
-            cur = cur[cur.length - 1];
-            var id = cur && cur.length ? cur[0].id : "";
-            // Set/remove active class
-            menuItems
-                .parent().removeClass("active")
-                .end().filter("[href='#" + id + "']").parent().addClass("active");
-        });
-
-
-        $(function () {
-            AOS.init({
-                disable: 'phone'
-            });
-        });
-
-
-
-        $(".mainmenu > nav > ul > li:has(ul)").addClass("has-submenu");
-        $(".mainmenu > nav > ul > li:has(ul)").addClass("small-submenu");
-        $(".mainmenu > nav > ul > li > ul").addClass("sub-menu");
-        $(".mainmenu > nav > ul.dropdown li").hover(function () {
-            $(this).addClass("hover");
-        }, function () {
-            $(this).removeClass("hover");
-        });
-        var $menu = $("#menu"),
-            $menulink = $("#menu-toggle"),
-            $searchTrigger = $(".search-toggle"),
-            $menuTriggercont = $("#menu_handler"),
-            $menuTrigger = $(".has-submenu > a"),
-            $megamenuTrigger = $(".megamenu > li > a");
-        $menulink.click(function (e) {
-            $menulink.toggleClass("active");
-            $menu.toggleClass("active");
-            $menuTriggercont.toggleClass("active");
-            $(".search-box").removeClass("active");
-        });
-
-        $menuTrigger.click(function (e) {
-            e.preventDefault();
-            var t = $(this);
-            t.toggleClass("active");
-            t.toggleClass("active").next("ul").toggleClass("active");
-            t.toggleClass("active").next(".megamenu-holder").toggleClass("active");
-        });
-
-        $megamenuTrigger.click(function (e) {
-            e.preventDefault();
-            var t = $(this);
-            t.toggleClass("active").next(".mega-submenu").toggleClass("active");
-        });
-
-        $searchTrigger.click(function (e) {
-            $menulink.removeClass("active");
-            $menu.removeClass("active");
-            $menuTriggercont.removeClass("active");
-            $(".search-box").toggleClass("active");
-        });
-
-        $(".mainmenu ul li:has(ul)");
-
-        $(".presslogos").ticker({
-            item: 'div',
-            pauseOnHover: false,
-            speed: 80,
-            delay: 400
-        });
-
-        $('.tab-a').click(function () {
-            $(".tab").removeClass('tab-active');
-            $(".tab[data-id='" + $(this).attr('data-id') + "']").addClass("tab-active");
-            $(".tab-a").removeClass('active-a');
-            $(this).parent().find(".tab-a").addClass('active-a');
-        });
-
-    });
-
-
-    $(window).on('load', function () {
-        setTimeout(function () {
-            $('#loading').fadeOut();
-        }, 4000);
-    });
-
-}(jQuery));
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.4
-    };
-
-    // IMAGE ANIMATION
-
-    let revealCallback = (entries) => {
-        entries.forEach((entry) => {
-            let container = entry.target;
-
-            if (entry.isIntersecting) {
-                console.log(container);
-                container.classList.add("animating");
-                return;
-            }
-
-            if (entry.boundingClientRect.top > 0) {
-                container.classList.remove("animating");
-            }
-        });
-    };
-
-    let revealObserver = new IntersectionObserver(revealCallback, options);
-
-    document.querySelectorAll(".reveal").forEach((reveal) => {
-        revealObserver.observe(reveal);
-    });
-
-});
-
-var $grid = $('.grid').isotope({
-    // options
-    itemSelector: '.grid-item',
-    layoutMode: 'fitRows',
-});
-
-// change is-checked class on buttons
-var $buttonGroup = $('.filters');
-$buttonGroup.on('click', 'li', function (event) {
-    $buttonGroup.find('.is-checked').removeClass('is-checked');
-    var $button = $(event.currentTarget);
-    $button.addClass('is-checked');
-    var filterValue = $button.attr('data-filter');
-    $grid.isotope({
-        filter: filterValue
-    });
-});
-
-var isLast = function (word) {
-    return $(word).next().length > 0 ? false : true;
-}
-
-var getNext = function (word) {
-    return $(word).next();
-}
-
-var getVisible = function () {
-    return document.getElementsByClassName('is-visible');
-}
-
-var getFirst = function () {
-    var node = $('.words-wrapper').children().first();
-    return node;
-}
-
-var switchWords = function (current, next) {
-    $(current).removeClass('is-visible').addClass('is-hidden');
-    $(next).removeClass('is-hidden').addClass('is-visible');
-}
-
-var getStarted = function () {
-    //We start by getting the visible element and its sibling
-    var first = getVisible();
-    var next = getNext(first);
-
-    //If our element has a sibling, it's not the last of the list. We switch the classes
-    if (next.length !== 0) {
-        switchWords(first, next);
-    } else {
-
-        //The element is the last of the list. We remove the visible class of the current element
-        $(first).removeClass('is-visible').addClass('is-hidden');
-
-        //And we get the first element of the list, and we give it the visible class. And it starts again.
-        var newEl = getFirst();
-        $(newEl).removeClass('is-hidden').addClass('is-visible');
-    }
-
-}
-
-var init = function () {
-    setInterval(function () {
-        getStarted()
-    }, 2000);
-}
-
-init();
     </script>
     <!-- JS ============================================ -->
+    <script src="assets/js/vendor/vanila_tilt.js"></script>
     <script src="assets/js/vendor/jquery.js"></script>
     <script src="assets/js/vendor/modernizer.min.js"></script>
     <script src="assets/js/vendor/feather.min.js"></script>
