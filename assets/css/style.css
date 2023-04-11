@@ -260,6 +260,22 @@ body {
   opacity: 0;
 }
 
+/* RESPONSIVE MOBILE FIXES */
+@media only screen and (max-width: 767px),
+  only screen and (max-device-width: 767px) {
+  .preloader .inner .percentage {
+    font-size: 30vh !important;
+  }
+}
+
+/* RESPONSIVE TABLET FIXES */
+@media only screen and (max-width: 991px),
+  only screen and (max-device-width: 991px) {
+  .preloader .inner .percentage {
+    font-size: 50vh;
+  }
+}
+
 /* feature section */
 .path-img {
   position: absolute;
@@ -18442,9 +18458,9 @@ span.sr-only {
 .icon_long_shape {
   z-index: 1;
   position: absolute;
-  left: 0;
+  right: 0;
   top: -5%;
-  right: auto;
+  left: auto;
   bottom: auto;
   width: 15rem;
 }
